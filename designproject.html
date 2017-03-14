@@ -1,52 +1,103 @@
 <!DOCTYPE html>
 <html>
   <head >
+    <meta charset= "utf-8">
     <title>EDP</title>
-
-    <!-- linking to personal CSS -->
-   <link rel="stylesheet" href="designproject.css">
-
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-          crossorigin="anonymous">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-          crossorigin="anonymous">
-
     <!-- Ensure proper mobile rendering -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//fonts.googleapis.com/css?family=Roboto:400,300,200,100&subset=latin,cyrillic" rel="stylesheet">
+    <!-- linking to personal CSS -->
+    <link rel="stylesheet" href="designproject.css">
+
+    <!-- Latest compiled and minified CSS BOOTSTRAP framework -->
+  <!--  <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">  -->
+
+    <!-- Optional BOOTSTRAP theme -->
+  <!--  <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+          crossorigin="anonymous">  -->
+
 
   </head>
+    <!-- Main header to be in all pages -->
+    <div id="headline">
 
-    <body >
-
-      <!-- Main header to be in all pages -->
-      <header>
-        <nav class=" navbar navbar-fixed-top">
+         <nav class=" navbar navbar-fixed-top">
           <div class="container">
+            <header>
             <ul class="nav nav-tabs">
                 <!-- Relative Paths -->
-                <li role="presentation" class="active"><a>Home</a></li>
-                <li role="presentation" ><a href="about.html">About</a></li>
-                <li role="presentation"><a href="references.html">Reference links</a></li>
+               <li role="presentation" class="active"><a>Home</a></li>
+                <li role="presentation" ><a href="about.html">About the device</a></li>
+                <li role="presentation"><a href="">Contact</a></li>
+                <li role="presentation"><a href="references.html">Reference</a></li>
+                <li role="presentation"><a href="loginpage.html">Login</a></li>
             </ul>
+            </header>
           </div>
         </nav>
 
-      </header>
+
 
  <!-- Main BODY -->
-
+     <div id= "firstpage">
       <div class= "container-fluid text-center">
-        <h1>CAR SECURITY SYSYEM WITH POSITION, ROUTE AND SPEED CALCULATIONS</h1>
-
-       <img src="http://www.pngpix.com/wp-content/uploads/2016/06/PNGPIX-COM-White-Lamborghini-Aventador-Car-PNG-Image.png" alt="car" >
+        <h1>PROCAR SECURITY</h1>
+        <<p>Building a mobile security system for everyone</p>
+       <!-- <img src="http://www.pngpix.com/wp-content/uploads/2016/06/PNGPIX-COM-White-Lamborghini-Aventador-Car-PNG-Image.png" alt="car" >  -->
       </div>
+
+      <div id= "blurb" class="container-fluid bg-4 text-center">
+          <h1>... insert header? </h1>
+                <p> ProCar is the world's best vehicle security and remote
+                    start brand with position, speed and routing. We use
+                    inexpensive and secure technology to
+                    provide a range of features that you can
+                    count on every time.
+                </p>
+          <!-- Add a button to the About and activity page -->
+                <div  id = "button1" class="btn-group btn-group-justified" role="group" aria-label="...">
+                    <!-- <button type="button1"><a href="about.html">Learn more</a></button> -->
+                    <button type="button2"><a href="activitylog.html">Activity Log</a></button>
+                </div>
+        </div>
+      <!-- ADD a form to register PEOPLE -->
+      <div>
+        <form method = "post"  id = "register">
+          <h2>Join the Pilot Program</h2>
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" placeholder="First Name, Last Name" required>
+          <label for="email">Email address</label>
+          <input type="email" name="email" id="email" placeholder = "neo@example.com" required>
+          <label for="tel">Telephone</label>
+          <input type="tel" name="tel" id="tel" placeholder= "(123) 456-7890" required>
+          <input type="submit" value= "Sign up">
+        </form>
+      </div>
+
+    </div>
+  </div>
+            <!-- CONTENT IMAGES and STYLISTIC IMAGES -->
+    <<div id= "secondpage" class="container">
+      <h2>About the creators</h2>
+      <!-- ADD A COROUSEL -->
+      <div id="images">
+        <img src="" alt="Suthan Nehrulingam: Hardware Dev">
+        <img src="" alt="Nirojan Kahtir...: Hardware Dev">
+        <img src="" alt="Usaila Anjum: Web Dev">
+      <!--  <img src="photo.png" srcset="photo@2x.png 2x"> -->
+      </div>
+
+      <br>
+    </div>
+
+
+
+
 
       <div id= "googleMap" class="container"></div>
       <!-- ADD GOOGLE MAP API -->
@@ -91,12 +142,17 @@
 
 
 
-      <footer> &copy; 2017 Ryerson University
+      <footer>
+
+        <!-- &copy; 2017 Ryerson University
         <ol class="breadcrumb">
           <li><a href="#">Suthan</a></li>
           <li><a href="#">Nirojan</a></li>
           <li><a href="#">Usaila</a></li>
-        </ol>
+        </ol> -->
+        <<div class="container">
+          <<p>We always need a footer</p>
+        </div>
       </footer>
       <!-- Latest compiled and minified JavaScript -->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
