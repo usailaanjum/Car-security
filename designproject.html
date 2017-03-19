@@ -1,72 +1,70 @@
 <!DOCTYPE html>
 <html>
   <head >
-    <meta charset= "utf-8">
+    <!-- <meta charset= "utf-8"> -->
     <title>EDP</title>
     <!-- Ensure proper mobile rendering -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="//fonts.googleapis.com/css?family=Roboto:400,300,200,100&subset=latin,cyrillic" rel="stylesheet">
+  <!--  <link href="//fonts.googleapis.com/css?family=Roboto:400,300,200,100&subset=latin,cyrillic" rel="stylesheet"> -->
     <!-- linking to personal CSS -->
-    <link rel="stylesheet" href="designproject.css">
+    <link rel="stylesheet" href="response.css">
 
     <!-- Latest compiled and minified CSS BOOTSTRAP framework -->
-  <!--  <link rel="stylesheet"
+    <link rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-          crossorigin="anonymous">  -->
+          crossorigin="anonymous">
 
     <!-- Optional BOOTSTRAP theme -->
-  <!--  <link rel="stylesheet"
+  <link rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
           integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-          crossorigin="anonymous">  -->
+          crossorigin="anonymous">
+</head>
 
-
-  </head>
+<body>
     <!-- Main header to be in all pages -->
-    <div id="headline">
-
-         <nav class=" navbar navbar-fixed-top">
-          <div class="container">
-            <header>
-            <ul class="nav nav-tabs">
-                <!-- Relative Paths -->
-               <li role="presentation" class="active"><a>Home</a></li>
-                <li role="presentation" ><a href="about.html">About the device</a></li>
-                <li role="presentation"><a href="">Contact</a></li>
+   <div id="topHeader" class = "nav-header">
+    <div class="container">
+          <header>
+            <nav class="navbar">
+              <ul>
+              <!-- Relative Paths -->
+                <li role="presentation" class="active"><a>Home</a></li>
+                <li role="presentation"><a href="about.html">About the Device</a></li>
+                <li role="presentation"><a href="#">Contact</a></li>
                 <li role="presentation"><a href="references.html">Reference</a></li>
                 <li role="presentation"><a href="loginpage.html">Login</a></li>
-            </ul>
-            </header>
-          </div>
-        </nav>
-
-
-
- <!-- Main BODY -->
-     <div id= "firstpage">
-      <div class= "container-fluid text-center">
-        <h1>PROCAR SECURITY</h1>
-        <<p>Building a mobile security system for everyone</p>
-       <!-- <img src="http://www.pngpix.com/wp-content/uploads/2016/06/PNGPIX-COM-White-Lamborghini-Aventador-Car-PNG-Image.png" alt="car" >  -->
+              </ul>
+            </nav>
+          </header>
+        </div>
       </div>
 
-      <div id= "blurb" class="container-fluid bg-4 text-center">
-          <h1>... insert header? </h1>
-                <p> ProCar is the world's best vehicle security and remote
+
+    <div id="headline">
+ <!-- Main BODY -->
+      <div class= "container">
+        <h1>PROCAR SECURITY</h1>
+        <p>Building a mobile security system for everyone</p>
+       <!-- <img src="http://www.pngpix.com/wp-content/uploads/2016/06/PNGPIX-COM-White-Lamborghini-Aventador-Car-PNG-Image.png" alt="car" >  -->
+
+
+      <div id= "blurb">
+                <p> <strong>ProCar</strong> is the world's best vehicle security and remote
                     start brand with position, speed and routing. We use
                     inexpensive and secure technology to
                     provide a range of features that you can
                     count on every time.
                 </p>
           <!-- Add a button to the About and activity page -->
-                <div  id = "button1" class="btn-group btn-group-justified" role="group" aria-label="...">
+            <!--    <div  id = "button1" class="btn-group btn-group-justified" role="group" aria-label="..."> -->
                     <!-- <button type="button1"><a href="about.html">Learn more</a></button> -->
-                    <button type="button2"><a href="activitylog.html">Activity Log</a></button>
-                </div>
+              <!--      <button type="button2"><a href="activitylog.html">Activity Log</a></button> -->
+              <!--  </div>  -->
         </div>
       <!-- ADD a form to register PEOPLE -->
-      <div>
+
         <form method = "post"  id = "register">
           <h2>Join the Pilot Program</h2>
           <label for="name">Name</label>
@@ -77,30 +75,52 @@
           <input type="tel" name="tel" id="tel" placeholder= "(123) 456-7890" required>
           <input type="submit" value= "Sign up">
         </form>
-      </div>
-
-    </div>
+        <br>
   </div>
-            <!-- CONTENT IMAGES and STYLISTIC IMAGES -->
-    <<div id= "secondpage" class="container">
+    </div>
+  <!-- // [END headline] -->
+
+
+
+<!-- // [START section1] -->
+<div id="section1">
+      <div class="container">
+        <h2>What will I learn?</h2>
+        <p>After completing this class, you'll have built a web application with a first-class mobile experience.</p>
+        <p>You'll understand what it takes to:</p>
+        <ul>
+          <li>build great web experiences on mobile devices</li>
+          <li>use the tools you need to test performance</li>
+          <li>apply your knowledge to your own projects in the future</li>
+        </ul>
+
+        <br>
+      </div>
+    </div>
+    <!-- // [END section1] -->
+
+
+<!-- CONTENT IMAGES and STYLISTIC IMAGES -->
+<!-- // [START section2] -->
+    <div id= "section2">
+      <div class="container">
       <h2>About the creators</h2>
       <!-- ADD A COROUSEL -->
       <div id="images">
-        <img src="" alt="Suthan Nehrulingam: Hardware Dev">
-        <img src="" alt="Nirojan Kahtir...: Hardware Dev">
-        <img src="" alt="Usaila Anjum: Web Dev">
+        <img src="https://media.licdn.com/media/p/3/000/252/365/3a677bf.jpg" alt="Suthan Nehrulingam: Hardware Dev">
+        <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAxHAAAAJGE0OGU3OGVhLTcyNTctNGYwOC1iZTRlLWRkNGU3ODIzODAxYg.jpg" alt="Nirojan Kahtir...: Hardware Dev">
+        <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAqNAAAAJGI5MjJlN2YzLThhMjItNDM4NS1hZTk3LWMxYmM0OGQwMjAwNw.jpg" alt="Usaila Anjum: Web Dev">
       <!--  <img src="photo.png" srcset="photo@2x.png 2x"> -->
       </div>
-
       <br>
     </div>
+  </div>
 
 
 
 
-
-      <div id= "googleMap" class="container"></div>
-      <!-- ADD GOOGLE MAP API -->
+    <!--  <div id= "googleMap" class="container"></div>
+       ADD GOOGLE MAP API
 
       <script
       src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCe3IJlceCne9sVoH-xXDuciBVoFlooHSE&callback=initMap">
@@ -129,34 +149,40 @@
             }
 
             google.maps.event.addDomListener(window, 'load', initialize);
-      </script>
-
-
-
-
-
-
-
-
-
+      </script> -->
 
 
 
       <footer>
-
-        <!-- &copy; 2017 Ryerson University
-        <ol class="breadcrumb">
-          <li><a href="#">Suthan</a></li>
-          <li><a href="#">Nirojan</a></li>
-          <li><a href="#">Usaila</a></li>
-        </ol> -->
-        <<div class="container">
-          <<p>We always need a footer</p>
+        <div class="container">
+          <p>Connect with us</p>
+          <br>
+          <div class ="footer-image">
+            <div id="images">
+            <img src = "https://octicons.github.com/img/og/mark-github.png" alt="github octopus icon">
+            <img src="https://image.flaticon.com/icons/png/512/8/8800.png" alt="Twitter bird icon">
+            <img src= "https://cdn3.iconfinder.com/data/icons/picons-social/57/11-linkedin-128.png" alt="linked in icon">
+         </div>
         </div>
+      </div>
       </footer>
       <!-- Latest compiled and minified JavaScript -->
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    <!--   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
               integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-              crossorigin="anonymous"></script>
+              crossorigin="anonymous"></script>  -->
+
+      <script type="text/javascript">
+            function init() {
+              window.matchMedia("(max-width: 600px)").addListener(hitMQ);
+            }
+
+            function hitMQ(evt) {
+              sampleCompleted("GettingStarted-ContentWithStyles");
+            }
+
+            init();
+
+          </script>
+
     </body>
 </html>
