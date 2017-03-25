@@ -3,11 +3,17 @@
   <head >
     <!-- <meta charset= "utf-8"> -->
     <title>EDP</title>
+
     <!-- Ensure proper mobile rendering -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--  <link href="//fonts.googleapis.com/css?family=Roboto:400,300,200,100&subset=latin,cyrillic" rel="stylesheet"> -->
-    <!-- linking to personal CSS -->
-    <link rel="stylesheet" href="response.css">
+
+    <!--  Style CSS -->
+    <link rel="stylesheet" href="css/response.css">
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+	  <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
     <!-- Latest compiled and minified CSS BOOTSTRAP framework -->
     <link rel="stylesheet"
@@ -27,13 +33,14 @@
    <div id="topHeader" class = "nav-header">
     <div class="container">
           <header>
-            <nav class="navbar">
+            <nav class="navbar" style="padding-top: 18px;
+            display: table-row-group;">
               <ul>
               <!-- Relative Paths -->
                 <li role="presentation" class="active"><a>Home</a></li>
                 <li role="presentation"><a href="about.html">About the Device</a></li>
-                <li role="presentation"><a href="#">Contact</a></li>
-                <li role="presentation"><a href="references.html">Reference</a></li>
+                <li role="presentation"><a href="#section3">Contact</a></li>
+              <!--  <li role="presentation"><a href="references.html">Reference</a></li> -->
                 <li role="presentation"><a href="loginpage.html">Login</a></li>
               </ul>
             </nav>
@@ -64,17 +71,17 @@
 
 
       <!-- ADD a form to register PEOPLE -->
-        <form method = "post"  id = "register">
-          <h2>Join the Pilot Program</h2>
-          <label for="name">Name</label>
-          <input type="text" name="name" id="name" placeholder="First Name, Last Name" required>
-          <label for="email">Email address</label>
-          <input type="email" name="email" id="email" placeholder = "neo@example.com" required>
-          <label for="tel">Telephone</label>
-          <input type="tel" name="tel" id="tel" placeholder= "(123) 456-7890" required>
-          <input type="submit" value= "Sign up">
-        </form>
-        <br>
+      <form method = "post"  id = "register"  >
+        <h2>Member Login</h2>
+        <label for="name">Username</label>
+        <input type="text" name="name" id="name" placeholder="Enter Username" required>
+        <label for="password">Password</label>
+        <input type="email" name="email" id="email" placeholder = "Enter Password" required>
+        <!--<label for="tel">Telephone</label>
+        <input type="tel" name="tel" id="tel" placeholder= "(123) 456-7890" required> -->
+        <input type="submit" value= "Sign in">
+      </form>
+      <br>
   </div>
     </div>
   <!-- // [END headline] -->
@@ -92,7 +99,7 @@
           <li>use the tools you need to test performance</li>
           <li>apply your knowledge to your own projects in the future</li>
         </ul>
-
+        <button type="goto"><a href="secondpage.html">SECOND PAGE YOOO</a></button>
         <br>
       </div>
     </div>
@@ -102,19 +109,131 @@
 
 <!-- // [START section2] -->
 <!-- CONTENT IMAGES and STYLISTIC IMAGES -->
-    <div id= "section2">
-      <div class="container">
-      <h2>About the creators</h2>
+<!-- <div id= "section2"> -->
+    <!--  <div class="container"> -->
+    <!--  <h2>About the creators</h2> -->
       <!-- ADD A COROUSEL -->
-      <div id="images">
-        <img src="https://media.licdn.com/media/p/3/000/252/365/3a677bf.jpg" alt="Suthan Nehrulingam: Hardware Dev">
-        <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAxHAAAAJGE0OGU3OGVhLTcyNTctNGYwOC1iZTRlLWRkNGU3ODIzODAxYg.jpg" alt="Nirojan Kahtir...: Hardware Dev">
-        <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAqNAAAAJGI5MjJlN2YzLThhMjItNDM4NS1hZTk3LWMxYmM0OGQwMjAwNw.jpg" alt="Usaila Anjum: Web Dev">
+    <!-- <div id="images"> -->
+
       <!--  <img src="photo.png" srcset="photo@2x.png 2x"> -->
-      </div>
-      <br>
-    </div>
-  </div>
+      <a id="founders"></a>
+      	<div id="fh5co-testimonial" class="fh5co-bg-section">
+      		<div class="container">
+      			<div class="row animate-box">
+      				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+      					<h2>About the Founders</h2>
+      				</div>
+      			</div>
+      			<div class="row">
+      				<div class="col-md-10 col-md-offset-1">
+      					<div class="row animate-box">
+      					<!--	<div class="owl-carousel owl-carousel-fullwidth"> -->
+      							<div class="owl-carousel owl-theme">
+      							<div class="item">
+      								<div class="testimony-slide active text-center">
+      									<figure>
+      										<img src="img/usaila.jpg" alt="user">
+      									</figure>
+      									<span style=" text-align: -webkit-center;
+                              padding-top: 20px; padding-right: 30px;">Usaila Anjum</span>
+
+
+      									<blockquote>
+      										<p>As a 4th year electrical engineering student, Leo has led on countless hardware projects during his time at Apple Inc. Leo brings a high level of professionalism and technical knowledge to the Flexo team.</p>
+      									</blockquote>
+      								</div>
+      							</div>
+      							<div class="item">
+      								<div class="testimony-slide active text-center">
+      									<figure>
+      										<img src="img/suthan.jpg" alt="user">
+      									</figure>
+      									<span style=" text-align: -webkit-center;
+                              padding-top: 20px; padding-right: 30px;">Suthan Nehrulingam</span>
+
+      									<blockquote>
+      										<p>Ritwika leads technical development at Flexo and is responsible for invaluable R&D learnings. She also adds a creative flare to Flexo with every design.</p>
+      									</blockquote>
+      								</div>
+      							</div>
+      							<div class="item">
+      								<div class="testimony-slide active text-center">
+      									<figure>
+      										<img src="img/nirojan.jpg" alt="user">
+      									</figure>
+      									<span style=" text-align: -webkit-center;
+                              padding-top: 20px; padding-right: 30px;">Nirojan Kathirganagam</span>
+
+      									<blockquote>
+      										<p>Software is Simon’s expertise. As a computer engineer from the University of Waterloo, Simon developed the key machine learning algorithms used in posture detection. </p>
+      									</blockquote>
+      								</div>
+      							</div>
+      						</div>
+      					</div>
+      				</div>
+      			</div>
+      		</div>
+      	</div>
+
+        <style >
+            #fh5co-testimonial {
+            	background: #efefef;
+            }
+            #fh5co-testimonial .testimony-slide {
+            	text-align: center;
+            }
+            #fh5co-testimonial .testimony-slide span {
+            	font-size: 12px;
+            	text-transform: uppercase;
+            	letter-spacing: 2px;
+            	font-weight: 700;
+            	display: block;
+            }
+            #fh5co-testimonial .testimony-slide figure {
+            	margin-bottom: 10px;
+            	display: -moz-inline-stack;
+            	display: inline-block;
+            	zoom: 1;
+            	*display: inline;
+            }
+            #fh5co-testimonial .testimony-slide figure img {
+            	width: 100px;
+            	-webkit-border-radius: 50%;
+            	-moz-border-radius: 50%;
+            	-ms-border-radius: 50%;
+            	border-radius: 50%;
+            }
+            #fh5co-testimonial .testimony-slide blockquote {
+            	border: none;
+            	margin: 30px auto;
+            	width: 70%;
+            	position: relative;
+            	padding: 0;
+            }
+            @media screen and (max-width: 992px) {
+            	#fh5co-testimonial .testimony-slide blockquote {
+            		width: 100%;
+            	}
+            }
+            #fh5co-testimonial .arrow-thumb {
+            	position: absolute;
+            	top: 40%;
+            	display: block;
+            	width: 100%;
+            }
+            #fh5co-testimonial .arrow-thumb a {
+            	font-size: 32px;
+            	color: #dadada;
+            }
+            #fh5co-testimonial .arrow-thumb a:hover, #fh5co-testimonial .arrow-thumb a:focus, #fh5co-testimonial .arrow-thumb a:active {
+            	text-decoration: none;
+            }
+    </style>
+      <!--  </div> -->
+
+      <!--  </div> -->
+    <!--</div> -->
 
 <!-- // [END section2] -->
 
@@ -178,12 +297,14 @@
             init();
 </script>
 
-<!-- Corousal -->
+<script src="js/jquery-3.2.0.js"></script>
+<script src="js/jquery.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
+<script src="js/custom.js"></script>
 
 
 
 
 
-    </body>
+  </body>
 </html>
