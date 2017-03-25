@@ -46,6 +46,7 @@ header {
 .nav-header{
   background-color: #39b1a4;
 }
+
 #topHeader header ul li {
 
         color: white;
@@ -61,7 +62,7 @@ header {
         color: white;
         font-family: Roboto, helvetica, arial, sans-serif;
         background-color: black;
-        background-image: url(carbackground1.2blur.jpg);
+        background-image: url(../carbackground1.2blur.jpg);
         background-size: cover;
       }
 
@@ -187,23 +188,23 @@ header {
 
       #section3 h2 {
         font-weight: 300;
+        font-size: 30px;
         text-align: center;
         margin-bottom: 0px;
         margin-top: 20px;
       }
 
-      #section3 h2 + p {
+      #section3 .container ul li {
         text-align: center;
+
+        list-style-type: none;
+      }
+      #section3 h2 + p + span{
+        text-align: center;
+        padding-top: 40px;
       }
 
-      #section3 figure {
-        text-align: center;
-      }
 
-      #section3 figure figcaption {
-        text-align: center;
-        font-weight: 400;
-      }
 
       footer {
         font-family: 'Roboto', sans-serif;
@@ -223,7 +224,7 @@ header {
        list-style: none;
      }  */
 
-
+/* STYLE the footer start */
      .social {
        text-align: center;
        list-style: none;
@@ -239,7 +240,7 @@ header {
      }
      .social-git a { padding-right: 10px;}
      .social-tweet a{ padding-right: 10px;}
-
+/* STYLE the footer ends */
 
 
 
@@ -279,11 +280,15 @@ header {
             padding: 10px 20% 80px 20%;
           }
 
-          #section1 h2, #section2 h2, #section3 h2  {
+          #section1 h2, #section2 h2   {
             margin-top: 0;
             font-size: 60px
           }
 
+          #section3 h2 {
+            margin-top: 0;
+            font-size: 30px;
+          }
           #section1 ul {
             box-sizing: border-box;
             float: left;
