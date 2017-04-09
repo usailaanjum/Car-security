@@ -1,35 +1,10 @@
-<?php
-
-session_start();
-
-//if( isset($_SESSION['user_id']) ){
-	//header("Location: /");
-//}
-require 'database.php';
-$message = '';
-if(!empty($_POST['email']) && !empty($_POST['password'])):
-  // Enter the new user in the database
-  	$sql = "INSERT INTO users (email, password) VALUES (:email, :password)";
-  	$stmt = $conn->prepare($sql);
-
-  	$stmt->bindParam(':email', $_POST['email']);
-  	$stmt->bindParam(':password', password_hash($_POST['password'], PASSWORD_BCRYPT));
-
-  	if( $stmt->execute() ):
-  		$message = 'Successfully created new user';
-  	else:
-  		$message = 'Sorry there must have been a issue creating your account';
-  	endif;
-
-endif;
-
-?>
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>EDP.register</title>
+  <head >
+    <!-- <meta charset= "utf-8"> -->
+    <title>EDP</title>
+
     <!-- Ensure proper mobile rendering -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--  <link href="//fonts.googleapis.com/css?family=Roboto:400,300,200,100&subset=latin,cyrillic" rel="stylesheet"> -->
@@ -52,8 +27,10 @@ endif;
           href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
           integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
           crossorigin="anonymous">
-  </head>
-  <body>
+    </head>
+
+<body>
+
     <!-- Main header to be in all pages -->
    <div id="topHeader" class = "nav-header">
     <div class="container">
@@ -62,11 +39,11 @@ endif;
             display: table-row-group;">
               <ul>
               <!-- Relative Paths -->
-                <li role="presentation"><a href="index.php">Home</a></li>
+                <li role="presentation" class="active"><a href="/">Home</a></li>
                 <li role="presentation"><a href="about.html">About the Device</a></li>
-                <li role="presentation"><a href="index.php#section3">Contact</a></li>
+                <li role="presentation"><a href="#section3">Contact</a></li>
               <!--  <li role="presentation"><a href="references.html">Reference</a></li> -->
-                <!--<li role="presentation"><a href="logout.php">Logout?</a></li> -->
+                <li role="presentation"><a href="logout.php">Logout?</a></li>
               </ul>
             </nav>
           </header>
@@ -75,34 +52,31 @@ endif;
 
 <!-- Main BODY -->
   <!-- // [START headline] -->
-  <div id="headline" class="mybackground">
+    <div id="headline" class="mybackground">
 
-    <div class= "container">
-      <br>
-      <br>
-      <h1>PROCAR SECURITY</h1>
-      <br>
-      <p>Building a mobile security system for everyone</p>
-      <br>
-     <!-- <img src="http://www.pngpix.com/wp-content/uploads/2016/06/PNGPIX-COM-White-Lamborghini-Aventador-Car-PNG-Image.png" alt="car" >  -->
+      <div class= "container">
+        <br>
+        <br>
+        <h1>PROCAR SECURITY</h1>
+        <br>
+        <p>Building a mobile security system for everyone</p>
+        <br>
+       <!-- <img src="http://www.pngpix.com/wp-content/uploads/2016/06/PNGPIX-COM-White-Lamborghini-Aventador-Car-PNG-Image.png" alt="car" >  -->
 
 
-    <div id= "blurb">
-              <p> <strong>ProCar</strong> is the world's best vehicle security and remote
-                  start brand with position, speed and routing. We use
-                  inexpensive and secure technology to
-                  provide a range of features that you can
-                  count on every time.
-              </p>
-    </div>
+      <div id= "blurb">
+                <p> <strong>ProCar</strong> is the world's best vehicle security and remote
+                    start brand with position, speed and routing. We use
+                    inexpensive and secure technology to
+                    provide a range of features that you can
+                    count on every time.
+                </p>
+      </div>
 
 <!-- ADD A HOVERING MESSAGE CENTER THINGY TO DISPLAY THIS MESSAGE -->
-<?php if(!empty($message)): ?>
-    <p><?= $message ?></p>
-  <?php endif; ?>
 
       <!-- ADD a form to register PEOPLE -->
-      <form method = "POST"  id = "register" action="register.php" >
+      <form method = "POST"  id = "register"  >
         <h2><a href="register.php">Register</a> | <a href="login.php">Login</a></h2>
         <label for="email">Email</label>
         <input type="text" name="email" id="name" placeholder="Enter your email" required>
@@ -110,7 +84,7 @@ endif;
         <input type="password" name="password" id="email" placeholder = "Enter Password" required>
         <input type="submit" value= "Submit">
       </form>
-      <br>
+<br>
   </div>
     </div>
   <!-- // [END headline] -->
@@ -269,7 +243,7 @@ endif;
              text-decoration: none;
             }
     </style>
-    <!--  </div> -->
+      <!--  </div> -->
 
       <!--  </div> -->
     <!--</div> -->
@@ -301,7 +275,7 @@ endif;
 <!-- got to ADD Twitter and linkedin link -->
       <footer>
         <div class="container">
-
+      <!--  <span>Connect with us</span> -->
           <br>
             <nav class="social">
               <ul>
