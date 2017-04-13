@@ -30,7 +30,7 @@ if( isset($_SESSION['user_id']) ){
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--  <link href="//fonts.googleapis.com/css?family=Roboto:400,300,200,100&subset=latin,cyrillic" rel="stylesheet"> -->
     <!-- linking to personal CSS -->
-   <link rel="stylesheet" href="css/response.css">
+   <link rel="stylesheet" href="css/response1.css">
 
     <!-- Latest compiled and minified CSS BOOTSTRAP framework -->
     <link rel="stylesheet"
@@ -89,12 +89,12 @@ if( isset($_SESSION['user_id']) ){
 		var deviceID = "530028001951353338363036";
 	var accessToken = "2c74fceaf932202ea057ca4477df1a7e3ff27b20";
 		window.setInterval(function() {
-        var varName3 = "carrspeed"; /* <--------- WHAT IS THE NAMEE?? */
+        var varName3 = "carrspeed"; //<--------- WHAT IS THE NAMEE??
 
         requestURL = "https://api.particle.io/v1/devices/" + deviceID + "/" + varName3 + "/?access_token=" + accessToken;
         $.getJSON(requestURL, function(json) {
                  document.getElementById("car_speed").innerHTML = json.result+'m/s';
-                 document.getElementById("car_speed").style.fontSize = "28px";
+                 document.getElementById("car_speed").style.fontSize = "40px";
 
                  });
 		}, 10000);
@@ -112,15 +112,48 @@ if( isset($_SESSION['user_id']) ){
  <div id= "googleMap" class="container"> </div>
 
 <div class="container">
-    <script
+  <!--  <script
     src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCe3IJlceCne9sVoH-xXDuciBVoFlooHSE&callback=initMap">
-    </script>
+	</script> -->
     <script type="text/javascript"   src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
     <script>
-       var myCenter = new google.maps.LatLng(43.661713, -79.373749); //insert the particle API
 
-        function initialize() {
+		       var deviceID="530028001951353338363036";
+		       var accessToken= "2c74fceaf932202ea057ca4477df1a7e3ff27b20";
+		       var locationToStringed = "val";
+		       requestURL = "https://api.particle.io/v1/devices/" + deviceID + "/" + locationToStringed + "/?access_token=" + accessToken;
+
+		       function myMap() {
+		     var myCenter = new google.maps.LatLng(43.653982, -79.380319);
+		       var mapProp = {
+		         center:myCenter,
+		         zoom:15,
+		         scrollwheel:false,
+		         draggable:false,
+		         mapTypeId:google.maps.MapTypeId.ROADMAP
+		       };
+
+		      var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+		      var infoWindow = new google.maps.InfoWindow();
+
+		      $.getJSON(requestURL, function(data) {
+		              var  latlngStr= data.result.split(" ");
+		              var lat = parseFloat(latlngStr[0]);
+		              var lng = parseFloat(latlngStr[1]);
+		              var parsedPosition = new google.maps.LatLng(lat, lng);
+
+		             var marker = new google.maps.Marker({
+		             position: parsedPosition,
+		             map: map,
+
+		             });
+
+		      });
+		       }
+      /* var myCenter = new google.maps.LatLng(43.661713, -79.373749); //insert the particle API
+
+        function initMap() {
         var mapProp = {
         center:myCenter,
         zoom:15,
@@ -144,6 +177,7 @@ if( isset($_SESSION['user_id']) ){
 					var accessToken= "2c74fceaf932202ea057ca4477df1a7e3ff27b20";
 					var varName1 = "lat";
 					var varName2 = "lng";
+
 					reqURL = ("https://api.particle.io/v1/devices/" + deviceID + "/"+ varName1+ "/"+ varName2 + "/?access_token=" + accessToken);
 
 								eventSource.addEventListener('gpsloc', function(e) {
@@ -158,7 +192,9 @@ if( isset($_SESSION['user_id']) ){
 
 									marker.setMap(null);
 
-									marker = new google.maps.Marker({position: loc, map: map});
+									marker = new google.maps.Marker({
+										position: loc,
+										map: map});
 
 									marker.setMap(null);
 									map.panTo(loc);
@@ -166,12 +202,15 @@ if( isset($_SESSION['user_id']) ){
 
 								}, false);
 							}
-							window.onload=start;
+							window.onload=start;  */
 
 
 
 
       </script>
+		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAV1SIAaktJaYpMrES9Szii9YGmIBdehlo&callback=myMap"></script>
+
 </div>
 <br>
 <br>
